@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Instant Data Scraper</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <header>
+    <h1>Instant Data Scraper</h1>
+    <button id="refresh" title="Erkennung aktualisieren" aria-label="Erkennung aktualisieren">↻</button>
+  </header>
+  <p id="status" class="status">Analysiere Seite ...</p>
+  <section class="toolbar">
+    <label>Wartezeit (ms)<input id="wait" type="number" min="0" step="100" value="1500"></label>
+    <button id="scroll">Mehr laden</button>
+    <button id="next">Nächste Seite</button>
+  </section>
+  <div class="table-wrap"><table id="preview"></table></div>
+  <section class="controls">
+    <label>Max. Zeilen<input id="limit" type="number" min="1" value="1000"></label>
+    <button id="exportCsv" class="primary">CSV exportieren</button>
+    <button id="exportXlsx">Excel exportieren</button>
+  </section>
+  <script src="popup.js"></script>
+</body>
+</html>
